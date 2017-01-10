@@ -8,4 +8,7 @@ public class URIConstant {
 	
 	public static final String PRODUCT_API_BASE="/product";
 	public static final String RESTAURANTS_LIST="/restaurant_list";
+	
+	public static final String NAVIGATION_API_BASE="/navigation";
+	public static final String MENU_LIST="/menu_list";
 }

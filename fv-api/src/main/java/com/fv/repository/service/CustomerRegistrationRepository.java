@@ -6,4 +6,6 @@ import com.fv.repository.domain.CustomerRegistrationEO;
 
 public interface CustomerRegistrationRepository extends CrudRepository<CustomerRegistrationEO, String>{
 
+	CustomerRegistrationEO findByApiKey(String apiKey);
+
 }
