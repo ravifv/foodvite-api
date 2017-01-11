@@ -17,6 +17,15 @@ public class ProductDetailEO  {
 	private String name;
 	private String picUrl;
 	private String price;
+	private int isExclude;
+	@DynamoDBAttribute(attributeName="isExclude") 
+	public int getIsExclude() {
+		return isExclude;
+	}
+	public void setIsExclude(int isExclude) {
+		this.isExclude = isExclude;
+	}
+
 	private String createdTimestamp;
 	private String updatedTimestmp;
 

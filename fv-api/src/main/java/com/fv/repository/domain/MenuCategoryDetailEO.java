@@ -1,6 +1,7 @@
 package com.fv.repository.domain;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.List;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
@@ -17,7 +18,7 @@ public class MenuCategoryDetailEO implements Serializable{
     
     private long categoryId;
     private String categoryName;
-    private List<Integer> productId;
+    private List<BigDecimal> productId;
     private String createdTimestamp;
     private String updatedTimestmp;
     
@@ -47,10 +48,10 @@ public class MenuCategoryDetailEO implements Serializable{
 	public void setCategoryName(String categoryName) {
 		this.categoryName = categoryName;
 	}
-	public List<Integer> getProductId() {
+	public List<BigDecimal> getProductId() {
 		return productId;
 	}
-	public void setProductId(List<Integer> productId) {
+	public void setProductId(List<BigDecimal> productId) {
 		this.productId = productId;
 	}
 	

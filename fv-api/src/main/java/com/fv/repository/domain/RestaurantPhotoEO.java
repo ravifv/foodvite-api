@@ -1,12 +1,22 @@
 package com.fv.repository.domain;
 
+import java.math.BigDecimal;
+
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 
 //TODO: Why are we classifying the Photographs based on restaurants ?? 
 //It must a generic Entity keeping all the records of photographs of user or restaurants 
 public class RestaurantPhotoEO {
 	
-	String restId;
+	BigDecimal restId;
+	public BigDecimal getRestId() {
+		return restId;
+	}
+
+	public void setRestId(BigDecimal restId) {
+		this.restId = restId;
+	}
+
 	String createdTimestamp;
 	String updatedTimestmp;
 	

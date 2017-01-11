@@ -1,6 +1,7 @@
 package com.fv.repository.domain;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
@@ -28,7 +29,15 @@ public class RestaurantDetailEO {
 	private int gstApplicable;
 	private int visits;
 	private String placeId;
+	private List<String> restaurantCategoryList;
 	
+	@DynamoDBAttribute(attributeName="restCategories") 
+	public List<String> getRestaurantCategoryList() {
+		return restaurantCategoryList;
+	}
+	public void setRestaurantCategoryList(List<String> restaurantCategoryList) {
+		this.restaurantCategoryList = restaurantCategoryList;
+	}
 	@DynamoDBAttribute(attributeName="createdTimestamp")  
 	public String getCreatedTimestamp() {
 		return createdTimestamp;

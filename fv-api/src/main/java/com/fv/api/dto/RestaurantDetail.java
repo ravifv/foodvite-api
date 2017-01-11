@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
-public class RestaurantDetail {
+public class RestaurantDetail{
 	
 	private  List <PhotographDetail> photographs;
 	private  int isTableReserve;
@@ -17,7 +17,14 @@ public class RestaurantDetail {
 	private String restaurantImage;
 	private chope chope;
 	private String placeId;
-
+	private List <CategoryDetail> categories;
+	
+	public List<CategoryDetail> getCategories() {
+		return categories;
+	}
+	public void setCategories(List<CategoryDetail> categories) {
+		this.categories = categories;
+	}
 	public int getIsTableReserve() {
 		return isTableReserve;
 	}
@@ -87,5 +94,23 @@ public class RestaurantDetail {
 		public void setUrl(String url) {
 			this.url = url;
 		}
+	}
+	
+	public  class CategoryDetail{
+		private String id;
+		public String getId() {
+			return id;
+		}
+		public void setId(String id) {
+			this.id = id;
+		}
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		private String name;
+		
 	}
 }
